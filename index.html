@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deskwatch — tus agentes de Claude Code, trabajando a la vista</title>
+  <meta name="description" content="Deskwatch convierte tus sesiones de Claude Code en una oficina 3D: mira lo que hace cada agente, responde a sus permisos y controla el consumo desde un solo sitio. En desarrollo.">
+  <meta property="og:title" content="Deskwatch">
+  <meta property="og:description" content="Tus agentes de Claude Code, trabajando a la vista. Una oficina 3D para ver y controlar todas tus sesiones.">
+  <meta property="og:image" content="img/oficina.jpg">
+  <meta name="theme-color" content="#0f0d0b">
+  <link rel="icon" href="img/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Deskwatch">
+      <img src="img/icon.png" alt="" width="30" height="30">
+      <span>Deskwatch</span>
+    </a>
+    <nav class="links">
+      <a href="#funciones" data-i18n="nav.features">Funciones</a>
+      <a href="#como" data-i18n="nav.how">Cómo funciona</a>
+      <a href="#preguntas" data-i18n="nav.faq">Preguntas</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a class="btn btn-ghost" href="https://github.com/davidrfyt/deskwatch" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- PORTADA -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow reveal"><span class="pulse"></span><span data-i18n="hero.eyebrow">En desarrollo · Windows · próximamente</span></p>
+        <h1 class="reveal" data-i18n-html="hero.title">Tus agentes de Claude&nbsp;Code, <em>trabajando a&nbsp;la&nbsp;vista.</em></h1>
+        <p class="lead reveal" data-i18n="hero.lead">Deskwatch convierte cada sesión de Claude Code en una persona sentada en su mesa, dentro de una oficina en 3D. Ves lo que hace cada uno, respondes a sus permisos y vigilas el consumo, todo desde un mismo sitio y sin tener VS Code abierto.</p>
+        <div class="ctas reveal">
+          <a class="btn btn-lamp" href="https://github.com/davidrfyt/deskwatch" target="_blank" rel="noopener" data-i18n="hero.cta">Sigue el proyecto en GitHub</a>
+          <a class="btn btn-ghost" href="#como" data-i18n="hero.cta2">Cómo funciona ↓</a>
+        </div>
+        <p class="fine reveal" data-i18n="hero.fine">Aún no hay descarga pública. Dale a «Watch» en GitHub y te avisaremos cuando salga.</p>
+      </div>
+
+      <figure class="hero-shot reveal">
+        <div class="monitor">
+          <div class="monitor-bar"><i></i><i></i><i></i><span>Deskwatch</span></div>
+          <img src="img/oficina.jpg" alt="Vista general de la oficina 3D de Deskwatch con tres proyectos y siete agentes trabajando" data-i18n-alt="alt.office" width="1600" height="900">
+        </div>
+        <div class="bubble b1" aria-hidden="true">✏️ <span data-i18n="bubble.edit">Editando Carrito.tsx</span></div>
+        <div class="bubble b2 warn" aria-hidden="true">✋ <span data-i18n="bubble.perm">Pide permiso: Bash</span></div>
+        <div class="bubble b3" aria-hidden="true">🌐 <span data-i18n="bubble.web">Buscando: stripe webhooks</span></div>
+        <div class="bubble b4" aria-hidden="true">💤 <span data-i18n="bubble.idle">En reposo</span></div>
+        <div class="glow" aria-hidden="true"></div>
+      </figure>
+    </section>
+
+    <!-- CINTA DE ESTADOS -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>● Edit <b>src/Carrito.tsx</b></span><span>● Bash <b>npm test</b></span><span class="t-warn">✋ PermissionRequest <b>npm run deploy</b></span><span>● WebSearch <b>stripe webhooks</b></span><span>● Agent <b>×2 subagentes</b></span><span>● Read <b>docs/api.md</b></span><span>● TodoWrite <b>3/5</b></span><span class="t-ok">✓ Stop</span>
+        <span>● Edit <b>src/Carrito.tsx</b></span><span>● Bash <b>npm test</b></span><span class="t-warn">✋ PermissionRequest <b>npm run deploy</b></span><span>● WebSearch <b>stripe webhooks</b></span><span>● Agent <b>×2 subagentes</b></span><span>● Read <b>docs/api.md</b></span><span>● TodoWrite <b>3/5</b></span><span class="t-ok">✓ Stop</span>
+      </div>
+    </div>
+
+    <!-- FUNCIONES -->
+    <section class="section" id="funciones">
+      <header class="section-head reveal">
+        <p class="kicker">01 — <span data-i18n="feat.kicker">La oficina</span></p>
+        <h2 data-i18n-html="feat.title">Todo lo que pasa en tus sesiones, <em>en una sola sala.</em></h2>
+      </header>
+      <div class="grid">
+        <article class="card reveal">
+          <span class="num">01</span>
+          <h3 data-i18n="f1.t">Cada sesión, una persona</h3>
+          <p data-i18n="f1.d">Teclea cuando edita, mira papeles cuando lee, se pone ante la terminal, coordina subagentes que vuelan alrededor de su mesa y se queda dormida cuando termina.</p>
+        </article>
+        <article class="card reveal">
+          <span class="num">02</span>
+          <h3 data-i18n="f2.t">Permisos sin cambiar de ventana</h3>
+          <p data-i18n="f2.d">Cuando un agente necesita permiso, gira la silla y levanta la mano. Lo apruebas, lo deniegas o lo permites para siempre desde el panel, con aviso y sonido.</p>
+        </article>
+        <article class="card reveal">
+          <span class="num">03</span>
+          <h3 data-i18n="f3.t">El chat de Claude Code, aquí</h3>
+          <p data-i18n="f3.d">Texto en directo, Markdown, diffs de cada edición, imágenes y PDF pegados o arrastrados, comandos con «/» y el contexto que te queda, siempre a la vista.</p>
+        </article>
+        <article class="card reveal">
+          <span class="num">04</span>
+          <h3 data-i18n="f4.t">Conversaciones que no se pierden</h3>
+          <p data-i18n="f4.d">Tus conversaciones anteriores esperan dormidas en su mesa. Escríbeles y continúan donde lo dejaron, sin abrir VS Code ni la terminal.</p>
+        </article>
+        <article class="card reveal">
+          <span class="num">05</span>
+          <h3 data-i18n="f5.t">Frenos de consumo</h3>
+          <p data-i18n="f5.d">Ve el uso de tu plan de 5 horas y 7 días. Pon un tope por ventana o un presupuesto diario, y Deskwatch detiene a todos los agentes cuando se alcanza.</p>
+        </article>
+        <article class="card reveal">
+          <span class="num">06</span>
+          <h3 data-i18n="f6.t">Tus proyectos, ya importados</h3>
+          <p data-i18n="f6.d">Encuentra las carpetas en las que ya usas Claude Code y les da su propia zona en la oficina, con color, modelo, permisos e instrucciones propias.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ESCAPARATE -->
+    <section class="section showcase">
+      <article class="show reveal">
+        <figure class="shot"><img src="img/permiso.jpg" alt="Un agente levanta la mano para pedir permiso y el panel muestra el comando con los botones para responder" data-i18n-alt="alt.perm" loading="lazy" width="1600" height="900"></figure>
+        <div class="show-copy">
+          <p class="kicker">02 — <span data-i18n="s1.k">Permisos</span></p>
+          <h3 data-i18n-html="s1.t">Levanta la mano. <em>Tú decides.</em></h3>
+          <p data-i18n="s1.d">Ves exactamente qué quiere ejecutar y respondes en un clic. Tienes «siempre en esta sesión» y «siempre en este proyecto» para no repetir, y «denegar y detener» para cortar en seco.</p>
+        </div>
+      </article>
+      <article class="show flip reveal">
+        <figure class="shot"><img src="img/chat.jpg" alt="Conversación con Claude en la que se pega la captura de un carrito de compra y Claude responde con una lista de mejoras" data-i18n-alt="alt.chat" loading="lazy" width="1600" height="900"></figure>
+        <div class="show-copy">
+          <p class="kicker">03 — <span data-i18n="s2.k">Conversación</span></p>
+          <h3 data-i18n-html="s2.t">Pega una captura. <em>Pregunta.</em></h3>
+          <p data-i18n="s2.d">El chat funciona como el de Claude Code. Pegas o arrastras imágenes y PDF, eliges modelo y permisos sobre la marcha, usas tus comandos y skills con «/», y ves el contexto y los tokens de cada sesión.</p>
+        </div>
+      </article>
+      <article class="show reveal">
+        <figure class="shot"><img src="img/freno.jpg" alt="Ajustes del freno de consumo con límites para la ventana de 5 horas, la de 7 días y un presupuesto diario" data-i18n-alt="alt.brake" loading="lazy" width="1600" height="900"></figure>
+        <div class="show-copy">
+          <p class="kicker">04 — <span data-i18n="s3.k">Consumo</span></p>
+          <h3 data-i18n-html="s3.t">Un freno <em>antes de llegar al límite.</em></h3>
+          <p data-i18n="s3.d">Por ejemplo: «como mucho un 15 % del límite semanal cada día» o «frenar al 80 % en cada ventana de 5 horas». Al llegar al tope, se detiene todo, y se reanuda solo en el siguiente periodo si así lo quieres.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section" id="como">
+      <header class="section-head reveal">
+        <p class="kicker">05 — <span data-i18n="how.kicker">Cómo funciona</span></p>
+        <h2 data-i18n-html="how.title">Tres pasos, <em>y a trabajar.</em></h2>
+      </header>
+      <ol class="steps">
+        <li class="reveal">
+          <span class="step-n">1</span>
+          <h3 data-i18n="h1.t">Abre Deskwatch</h3>
+          <p data-i18n="h1.d">Una app de escritorio para Windows que lleva Claude Code dentro y usa la sesión de Claude que ya tienes iniciada.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-n">2</span>
+          <h3 data-i18n="h2.t">Tus proyectos aparecen solos</h3>
+          <p data-i18n="h2.d">Importa las carpetas en las que trabajas y coloca en la oficina tus últimas conversaciones. Si quieres, también sigue las sesiones de la terminal y de VS Code.</p>
+        </li>
+        <li class="reveal">
+          <span class="step-n">3</span>
+          <h3 data-i18n="h3.t">Dirige desde la oficina</h3>
+          <p data-i18n="h3.d">Lanza agentes, despierta conversaciones, responde permisos y vigila el consumo sin saltar entre ventanas.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PREGUNTAS -->
+    <section class="section faq" id="preguntas">
+      <header class="section-head reveal">
+        <p class="kicker">06 — <span data-i18n="faq.kicker">Preguntas</span></p>
+        <h2 data-i18n-html="faq.title">Lo que <em>seguramente</em> te estás preguntando.</h2>
+      </header>
+      <div class="qa reveal">
+        <details>
+          <summary data-i18n="q1">¿Cuándo sale?</summary>
+          <p data-i18n="a1">Está en desarrollo activo y todavía no hay descarga pública. Sigue el repositorio en GitHub («Watch» → «Custom» → «Releases») para enterarte en cuanto haya una versión.</p>
+        </details>
+        <details>
+          <summary data-i18n="q2">¿Qué necesito para usarlo?</summary>
+          <p data-i18n="a2">Windows y una cuenta de Claude con acceso a Claude Code. Deskwatch incluye su propio Claude Code, así que no hace falta tener VS Code ni una terminal abiertos.</p>
+        </details>
+        <details>
+          <summary data-i18n="q3">¿Mis datos salen de mi ordenador?</summary>
+          <p data-i18n="a3">Deskwatch funciona en local: lee y controla las sesiones de tu propio equipo. Lo único que sale es lo que Claude Code ya envía a Claude para trabajar.</p>
+        </details>
+        <details>
+          <summary data-i18n="q4">¿Es un producto de Anthropic?</summary>
+          <p data-i18n="a4">No. Deskwatch es un proyecto independiente que funciona con Claude Code. No está afiliado a Anthropic ni cuenta con su respaldo.</p>
+        </details>
+        <details>
+          <summary data-i18n="q5">¿Y en macOS o Linux?</summary>
+          <p data-i18n="a5">De momento se desarrolla para Windows. Otras plataformas están en la lista de ideas.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="closing reveal">
+      <h2 data-i18n-html="close.title">La oficina abre <em>pronto.</em></h2>
+      <p data-i18n="close.d">Si quieres enterarte cuando salga, sigue el proyecto en GitHub.</p>
+      <a class="btn btn-lamp" href="https://github.com/davidrfyt/deskwatch" target="_blank" rel="noopener" data-i18n="close.cta">Seguir en GitHub</a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p><b>Deskwatch</b> · <span data-i18n="foot.made">Hecho con cariño (y con muchos agentes trabajando).</span></p>
+    <p class="disclaimer" data-i18n="foot.legal">Claude y Claude Code son marcas de Anthropic. Deskwatch es un proyecto independiente y no está afiliado a Anthropic ni cuenta con su respaldo.</p>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden><img alt=""></div>
+  <script src="main.js"></script>
+</body>
+</html>
