@@ -4,7 +4,7 @@
 
 Deskwatch is a Windows desktop app that turns every Claude Code session into a person at a desk in a 3D office. See what each agent is doing at a glance, approve permission requests, chat with them (images, PDFs, slash commands), and keep your plan usage in check with limits and budgets.
 
-**[⬇ Download for Windows](https://github.com/davidrfyt/deskwatch/releases/latest)** · **[Website](https://davidrfyt.github.io/deskwatch/)**
+**[⬇ Download for Windows](https://github.com/davidrfyt/deskwatch/releases/latest)** · **[Website](https://deskwatch.es)**
 
 ![The Deskwatch office](img/oficina.webp)
 
