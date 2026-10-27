@@ -33,6 +33,7 @@
       </a>
       <nav class="links" aria-label="Sections">
         <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#video" data-i18n="nav.video">Video</a>
         <a href="#gallery" data-i18n="nav.gallery">Screenshots</a>
         <a href="#how" data-i18n="nav.how">How it works</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
@@ -85,6 +86,24 @@
         <span>● Edit <b>src/Cart.tsx</b></span><span>● Bash <b>npm test</b></span><span class="t-warn">✋ PermissionRequest <b>npm run deploy</b></span><span>● WebSearch <b>stripe webhooks</b></span><span>● Agent <b>×2</b></span><span>● Read <b>docs/api.md</b></span><span>● TodoWrite <b>3/5</b></span><span class="t-ok">✓ Stop</span>
       </div>
     </div>
+
+    <!-- VIDEO -->
+    <section class="section" id="video">
+      <header class="head reveal">
+        <p class="kicker" data-i18n="vid.kicker">Video</p>
+        <h2 data-i18n-html="vid.title">See it <em>in action.</em></h2>
+        <p class="vid-lead" data-i18n="vid.lead">Two and a half minutes inside the office: real Claude Code agents launching, asking for permission, fixing a test and pushing to GitHub.</p>
+      </header>
+      <figure class="frame vid-frame reveal">
+        <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>Deskwatch</span></div>
+        <video controls preload="none" playsinline poster="img/video-poster.webp" width="1920" height="1080" aria-label="Deskwatch presentation video" data-i18n-label="vid.aria">
+          <source src="video/deskwatch.mp4" type="video/mp4">
+          <track kind="subtitles" src="video/deskwatch.es.vtt" srclang="es" label="Español">
+        </video>
+      </figure>
+      <p class="fine vid-note reveal"><span data-i18n="vid.note">Narrated in Spanish · subtitles available in the player</span><br>
+        <span data-i18n="vid.credits">Music: “Floating Cities” by Kevin MacLeod (incompetech.com), CC BY 4.0 · TV clip: “Big Buck Bunny” © Blender Foundation, CC BY 3.0</span></p>
+    </section>
 
     <!-- FEATURES -->
     <section class="section" id="features">
