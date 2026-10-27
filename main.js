@@ -20,7 +20,7 @@ const ES = {
   'f1.t': 'Cada sesión, una persona',
   'f1.d': 'Teclean cuando editan, leen cuando leen, se toman un café en los descansos y se quedan dormidos al terminar. En su monitor ves la conversación en directo.',
   'f2.t': 'Permisos sin cambiar de ventana',
-  'f2.d': 'Cuando un agente necesita permiso, gira la silla y levanta la mano. Lo permites, lo deniegas o lo permites para siempre en un clic.',
+  'f2.d': 'Cuando un agente necesita permiso, gira la silla hacia ti y se enciende su luz roja. Lo permites, lo deniegas o lo permites para siempre en un clic.',
   'f3.t': 'El chat de Claude Code, integrado',
   'f3.d': 'Texto en directo, Markdown, diffs, imágenes y PDF pegados, comandos y skills con «/», y el contexto que te queda siempre a la vista.',
   'f4.t': 'Una oficina a tu gusto',
@@ -90,7 +90,7 @@ const ES = {
   'alt.close': 'Primer plano de un agente tecleando en su mesa, con la conversación en su monitor',
   'alt.rooms': 'Vista cenital de la oficina con una cocina y una sala de descanso construidas junto a la sala principal',
   'alt.chars': 'Editor de personajes con una galería de modelos, extras y poses',
-  'alt.perm': 'Un agente levanta la mano para pedir permiso y el panel muestra el comando con los botones para responder',
+  'alt.perm': 'Un agente se gira para pedir permiso, con su luz roja encendida, y el panel muestra el comando con los botones para responder',
   'alt.chat': 'Conversación en la que se pega la captura de un carrito y Claude responde con una lista de mejoras',
   'alt.brake': 'Ajustes del freno de consumo con topes para la ventana de 5 horas, la de 7 días y un presupuesto diario',
   title: 'Deskwatch — mira a tus agentes de Claude Code ponerse a trabajar',
@@ -99,7 +99,7 @@ const ES = {
 
 // Alt texts used only by the gallery (no element carries them in the HTML).
 const EN_EXTRA = {
-  'alt.perm': 'An agent raises a hand to ask for permission while the panel shows the command and the buttons to answer it',
+  'alt.perm': 'An agent turns around with its red light on to ask for permission while the panel shows the command and the buttons to answer it',
   'alt.chat': 'A conversation where a shopping cart screenshot is pasted in and Claude replies with a list of improvements',
   'alt.brake': 'Usage brake settings with caps for the 5-hour window, the 7-day window and a daily budget',
 };
