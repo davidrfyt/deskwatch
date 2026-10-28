@@ -72,9 +72,24 @@ const ES = {
   q1: '¿Qué necesito para usarlo?',
   a1: 'Windows 10 u 11 y una cuenta de Claude con acceso a Claude Code. Deskwatch incluye su propio Claude Code, así que no necesitas tener VS Code ni una terminal abiertos.',
   q2: '¿Cómo se actualiza?',
-  a2: 'Sola. Al abrirse comprueba si hay una versión nueva, la descarga en segundo plano y te deja reiniciar cuando te venga bien.',
+  a2: 'Al abrirse y cada pocas horas comprueba si hay una versión nueva y te avisa. Solo la descarga cuando aceptas, y se instala al reiniciar.',
   q3: '¿Mis datos salen de mi ordenador?',
-  a3: 'Deskwatch funciona en local: lee y controla las sesiones de tu propio equipo. Lo único que sale es lo que Claude Code ya envía a Claude para hacer su trabajo.',
+  a3: 'Deskwatch funciona en local y no tiene telemetría. De tu equipo sale lo que Claude Code ya envía a Claude, la comprobación de actualizaciones en GitHub y lo que tú uses (GitHub, vídeos de YouTube). Todos los detalles están en el <a href="#trust">informe de transparencia</a>.',
+  'trust.kicker': 'Transparencia',
+  'trust.title': 'Sabe exactamente <em>qué hace.</em>',
+  'trust.lead': 'Hemos revisado el código completo de Deskwatch y lo hemos puesto todo en un documento: a qué se conecta, qué lee y escribe en tu equipo, cómo trata tus credenciales, qué encontramos y qué corregimos.',
+  'trust.l1': 'Sin telemetría ni analíticas',
+  'trust.l2': 'Su servidor local solo atiende a tu propio equipo',
+  'trust.l3': 'No lee tu sesión de Claude ni guarda tu token de GitHub',
+  'trust.l4': 'No necesita permisos de administrador',
+  'trust.cta': 'Descargar el informe (PDF)',
+  'trust.cta2': 'English version',
+  'trust.pdf': 'docs/deskwatch-transparencia-seguridad.pdf',
+  'trust.pdf2': 'docs/deskwatch-transparency-security.pdf',
+  'trust.img': 'img/informe-es.webp',
+  'trust.alt': 'Portada del informe de transparencia y seguridad de Deskwatch',
+  'trust.fine': 'Autoevaluación del propio proyecto, versión 2.9.21 · octubre de 2026. No es una auditoría independiente.',
+  'foot.trust': 'Seguridad',
   q4: '¿Gasta más de mi plan?',
   a4: 'No añade consumo propio: tus agentes son las mismas sesiones de Claude Code de siempre. Y con los frenos de consumo puedes poner un tope para no pasarte nunca.',
   q5: '¿Es un producto de Anthropic?',
@@ -111,7 +126,11 @@ const nodes = {
   html: [...document.querySelectorAll('[data-i18n-html]')],
   alt: [...document.querySelectorAll('[data-i18n-alt]')],
   label: [...document.querySelectorAll('[data-i18n-label]')],
+  href: [...document.querySelectorAll('[data-i18n-href]')],
+  src: [...document.querySelectorAll('[data-i18n-src]')],
 };
+nodes.href.forEach((el) => (EN[el.dataset.i18nHref] = el.getAttribute('href')));
+nodes.src.forEach((el) => (EN[el.dataset.i18nSrc] = el.getAttribute('src')));
 nodes.text.forEach((el) => (EN[el.dataset.i18n] = el.textContent));
 nodes.html.forEach((el) => (EN[el.dataset.i18nHtml] = el.innerHTML));
 nodes.alt.forEach((el) => (EN[el.dataset.i18nAlt] = el.alt));
@@ -130,6 +149,8 @@ function setLang(lang) {
   nodes.html.forEach((el) => dict[el.dataset.i18nHtml] != null && (el.innerHTML = dict[el.dataset.i18nHtml]));
   nodes.alt.forEach((el) => dict[el.dataset.i18nAlt] != null && (el.alt = dict[el.dataset.i18nAlt]));
   nodes.label.forEach((el) => dict[el.dataset.i18nLabel] != null && el.setAttribute('aria-label', dict[el.dataset.i18nLabel]));
+  nodes.href.forEach((el) => dict[el.dataset.i18nHref] != null && el.setAttribute('href', dict[el.dataset.i18nHref]));
+  nodes.src.forEach((el) => dict[el.dataset.i18nSrc] != null && el.setAttribute('src', dict[el.dataset.i18nSrc]));
   document.title = dict.title;
   metaDesc.content = dict.description;
   document.documentElement.lang = lang;

@@ -37,6 +37,7 @@
         <a href="#gallery" data-i18n="nav.gallery">Screenshots</a>
         <a href="#how" data-i18n="nav.how">How it works</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#trust" data-i18n="foot.trust">Security</a>
       </nav>
       <div class="nav-right">
         <div class="lang" role="group" aria-label="Language / Idioma">
@@ -261,11 +262,11 @@
         </details>
         <details>
           <summary data-i18n="q2">How does it update?</summary>
-          <p data-i18n="a2">On its own. When it starts, it checks for a new version, downloads it in the background and lets you restart whenever it suits you.</p>
+          <p data-i18n="a2">It checks for a new version when it starts and every few hours, and lets you know. It downloads only when you accept, and installs when you restart.</p>
         </details>
         <details>
           <summary data-i18n="q3">Does my data leave my computer?</summary>
-          <p data-i18n="a3">Deskwatch runs locally: it reads and controls the sessions on your own machine. The only thing that leaves it is what Claude Code already sends to Claude to do its job.</p>
+          <p data-i18n-html="a3">Deskwatch runs locally and has no telemetry. What leaves your computer is what Claude Code already sends to Claude, the update check on GitHub and whatever you use yourself (GitHub, YouTube videos). Every detail is in the <a href="#trust">transparency report</a>.</p>
         </details>
         <details>
           <summary data-i18n="q4">Will it eat into my plan?</summary>
@@ -279,6 +280,31 @@
           <summary data-i18n="q6">What about macOS or Linux?</summary>
           <p data-i18n="a6">Windows only for now. Other platforms are on the wish list.</p>
         </details>
+      </div>
+    </section>
+
+    <!-- TRANSPARENCY -->
+    <section class="section trust" id="trust">
+      <div class="trust-in reveal">
+        <div class="trust-text">
+          <p class="kicker" data-i18n="trust.kicker">Transparency</p>
+          <h2 data-i18n-html="trust.title">Know exactly <em>what it does.</em></h2>
+          <p class="trust-lead" data-i18n="trust.lead">We reviewed Deskwatch's entire source code and put it all in one document: what it connects to, what it reads and writes on your computer, how it handles your credentials, what we found and what we fixed.</p>
+          <ul class="trust-list">
+            <li data-i18n="trust.l1">No telemetry or analytics</li>
+            <li data-i18n="trust.l2">Its local server only answers your own computer</li>
+            <li data-i18n="trust.l3">It never reads your Claude login or stores your GitHub token</li>
+            <li data-i18n="trust.l4">No administrator rights needed</li>
+          </ul>
+          <div class="trust-cta">
+            <a class="btn btn-primary" href="docs/deskwatch-transparency-security.pdf" data-i18n-href="trust.pdf" download data-i18n="trust.cta">Download the report (PDF)</a>
+            <a class="btn btn-ghost" href="docs/deskwatch-transparencia-seguridad.pdf" data-i18n-href="trust.pdf2" download data-i18n="trust.cta2">Versión en español</a>
+          </div>
+          <p class="fine trust-fine" data-i18n="trust.fine">Self-assessment by the project, version 2.9.21 · October 2026. It is not an independent audit.</p>
+        </div>
+        <a class="trust-doc" href="docs/deskwatch-transparency-security.pdf" data-i18n-href="trust.pdf" target="_blank" rel="noopener" aria-label="Open the report">
+          <img src="img/informe-en.webp" data-i18n-src="trust.img" alt="Cover of the Deskwatch transparency and security report" data-i18n-alt="trust.alt" width="300" height="424" loading="lazy">
+        </a>
       </div>
     </section>
 
