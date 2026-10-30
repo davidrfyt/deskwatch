@@ -348,3 +348,10 @@ h2 em { font-size: 1.06em; }
   .trust-in { grid-template-columns: 1fr; padding: 30px 22px; gap: 34px; }
   .trust-doc { max-width: 220px; }
 }
+
+/* tarjeta a todo el ancho (la última, para no dejarla sola en su fila) */
+@media (min-width: 861px) {
+  .tile.tile-wide { grid-column: 1 / -1; min-height: 0; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: 40px; }
+  .tile.tile-wide .tile-copy { max-width: 62ch; }
+  .tile.tile-wide .mock { flex: none; width: 340px; margin: 0; }
+}
