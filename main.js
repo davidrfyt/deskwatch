@@ -91,7 +91,7 @@ const ES = {
   'trust.pdf2': 'docs/deskwatch-transparency-security.pdf',
   'trust.img': 'img/informe-es.webp',
   'trust.alt': 'Portada del informe de transparencia y seguridad de Deskwatch',
-  'trust.fine': 'Autoevaluación del propio proyecto, versión 2.10.0 · octubre de 2026. No es una auditoría independiente.',
+  'trust.fine': 'Autoevaluación del propio proyecto, versión 2.10.1 · noviembre de 2026. No es una auditoría independiente.',
   'foot.trust': 'Seguridad',
   q4: '¿Gasta más de mi plan?',
   a4: 'No añade consumo propio: tus agentes son las mismas sesiones de Claude Code de siempre. Y con los frenos de consumo puedes poner un tope para no pasarte nunca.',
