@@ -33,8 +33,8 @@ const ES = {
   'f7.d': 'Activa el remoto de cualquier sesión y continúala desde Claude en el móvil o en la web, sin perder de vista la oficina.',
   'f8.t': 'Skills con un enlace',
   'f8.d': 'Pega el enlace de un repositorio de GitHub, revisa qué trae cada skill e instala solo las que quieras, para todos tus proyectos o para uno.',
-  'f9.t': 'Un editor de código completo, integrado',
-  'f9.d': 'Abre cualquier proyecto en un editor basado en VS Code: archivos, búsqueda, Git, depurador, terminal y extensiones de Open VSX. Sin necesitar VS Code y sin telemetría.',
+  'f9.t': 'Un editor de código y una terminal, integrados',
+  'f9.d': 'Abre cualquier proyecto sin salir de la oficina: explorador de archivos, búsqueda, paleta de comandos, Git, una terminal real y un chat con Claude que admite imágenes, PDF y archivos. Integrado, sin extensiones que instalar y sin telemetría.',
   'mock.editor': 'Editor',
   'mock.perm': 'Pide permiso: Bash',
   'mock.allow': 'Permitir',
@@ -91,7 +91,7 @@ const ES = {
   'trust.pdf2': 'docs/deskwatch-transparency-security.pdf',
   'trust.img': 'img/informe-es.webp',
   'trust.alt': 'Portada del informe de transparencia y seguridad de Deskwatch',
-  'trust.fine': 'Autoevaluación del propio proyecto, versión 2.10.1 · noviembre de 2026. No es una auditoría independiente.',
+  'trust.fine': 'Autoevaluación del propio proyecto, versión 2.11.0 · noviembre de 2026. No es una auditoría independiente.',
   'foot.trust': 'Seguridad',
   q4: '¿Gasta más de mi plan?',
   a4: 'No añade consumo propio: tus agentes son las mismas sesiones de Claude Code de siempre. Y con los frenos de consumo puedes poner un tope para no pasarte nunca.',
@@ -112,7 +112,7 @@ const ES = {
   'alt.chat': 'Conversación en la que se pega la captura de un carrito y Claude responde con una lista de mejoras',
   'alt.brake': 'Ajustes del freno de consumo con topes para la ventana de 5 horas, la de 7 días y un presupuesto diario',
   title: 'Deskwatch — mira a tus agentes de Claude Code ponerse a trabajar',
-  description: 'Deskwatch convierte tus sesiones de Claude Code en una oficina 3D. Ve qué hace cada agente, aprueba permisos, habla con ellos y controla el consumo desde una sola ventana. Para Windows 10/11.',
+  description: 'Deskwatch convierte tus sesiones de Claude Code en una oficina 3D. Ve qué hace cada agente, aprueba permisos, habla con ellos y controla el consumo desde una sola ventana. En español e inglés, para Windows 10/11.',
 };
 
 // Alt texts used only by the gallery (no element carries them in the HTML).
